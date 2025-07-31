@@ -317,7 +317,6 @@ section {
     z-index: 3 !important;
     text-align: center;
     margin-bottom: 4rem;
-    display: block;
 }
 
 .about-main h3 {
@@ -508,7 +507,7 @@ section {
 
 .tech-features {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
     gap: 2rem;
 }
 
@@ -1085,7 +1084,9 @@ section {
     }
     
     .tech-features {
-        grid-template-columns: 1fr;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
     }
     
     .gallery-grid {
