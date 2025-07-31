@@ -1,14 +1,34 @@
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM loaded, initializing NuruSafe website...');
-    //check if main section exists
+    
+    // Check if main sections exist
     const aboutSection = document.getElementById('about');
     const techSection = document.getElementById('technology');
+    const servicesSection = document.getElementById('services');
+    const newsSection = document.getElementById('news');
     const teamSection = document.getElementById('cast');
 
     console.log('About Section found:', !!aboutSection);
     console.log('Technology Section found:', !!techSection);
+    console.log('Services Section found:', !!servicesSection);
+    console.log('News Section found:', !!newsSection);
     console.log('Team Section found:', !!teamSection);
+    
+    // Check if sections are visible
+    if (aboutSection) {
+        const aboutStyles = window.getComputedStyle(aboutSection);
+        console.log('About section display:', aboutStyles.display);
+        console.log('About section visibility:', aboutStyles.visibility);
+        console.log('About section opacity:', aboutStyles.opacity);
+    }
+    
+    if (techSection) {
+        const techStyles = window.getComputedStyle(techSection);
+        console.log('Technology section display:', techStyles.display);
+        console.log('Technology section visibility:', techStyles.visibility);
+        console.log('Technology section opacity:', techStyles.opacity);
+    }
     // Navigation functionality
     initNavigation();
     
